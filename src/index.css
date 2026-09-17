@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; }
+
+.app-layout { display: flex; flex-direction: column; min-height: 100vh; }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.8rem 1.5rem; background: #2d1b4e; color: white;
+}
+.header__logo { color: white; font-weight: bold; font-size: 1.2rem; }
+.header__actions { display: flex; gap: 1rem; }
+.icon-btn { background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; }
+
+.app-body { display: flex; flex: 1; }
+
+.sidebar { width: 200px; background: #3a2361; padding: 1rem 0; flex-shrink: 0; }
+.sidebar nav { display: flex; flex-direction: column; }
+.sidebar a { padding: 0.7rem 1.5rem; color: #ccc; text-decoration: none; }
+.sidebar a:hover { background: #4e2f80; color: white; }
+.sidebar a.active { background: #4e2f80; color: white; border-left: 3px solid #e94560; }
+
+.app-content { flex: 1; padding: 1.5rem; background: #f5f5f5; }
+
+/* ---- Dark mode ---- */
+body.dark-mode {
+  background: #121212 !important;
+  color: #eee !important;
+}
+body.dark-mode .app-content {
+  background: #1a1a1a !important;
+  color: #eee !important;
+}
+
+/* Ant Design components */
+body.dark-mode .ant-card {
+  background: #222 !important;
+  border-color: #333 !important;
+  color: #eee !important;
+}
+body.dark-mode .ant-card-head,
+body.dark-mode .ant-card-head-title {
+  background: #222 !important;
+  color: #eee !important;
+  border-color: #333 !important;
+}
+body.dark-mode .ant-typography,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5 {
+  color: #eee !important;
+}
+body.dark-mode .ant-input,
+body.dark-mode .ant-input-affix-wrapper {
+  background: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #eee !important;
+}
+body.dark-mode .ant-input::placeholder {
+  color: #888 !important;
+}
+body.dark-mode .ant-select-selector {
+  background: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #eee !important;
+}
+body.dark-mode .ant-select-selection-item,
+body.dark-mode .ant-select-arrow {
+  color: #eee !important;
+}
+body.dark-mode .ant-btn-default {
+  background: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #eee !important;
+
+}
+body.dark-mode .ant-card-body {
+  background: #222 !important;
+  color: #eee !important;
+}
+body.dark-mode .ant-card-actions {
+  background: #1a1a1a !important;
+  border-color: #333 !important;
+}
+body.dark-mode .ant-card-actions > li {
+  color: #ddd !important;
+}
+body.dark-mode .ant-card-meta-title {
+  color: #fff !important;
+}
+body.dark-mode .ant-card-meta-description {
+  color: #bbb !important;
+}
+body.dark-mode .ant-tag {
+  background: #333 !important;
+  border-color: #444 !important;
+  color: #eee !important;
+}
+body.dark-mode .ant-card-actions a {
+  color: #ccc !important;
+}
+
+/* Catch-all: any plain text (including inline-styled greys) inside the
+   main content area or cards should be light, not dark-on-dark */
+body.dark-mode .app-content p,
+body.dark-mode .app-content span,
+body.dark-mode .app-content strong,
+body.dark-mode .ant-card p,
+body.dark-mode .ant-card span,
+body.dark-mode .ant-card strong {
+  color: #ddd !important;
+}
